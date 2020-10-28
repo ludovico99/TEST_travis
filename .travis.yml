@@ -1,4 +1,13 @@
 language: java
 jdk:
    -openjdk15
+addons:
+  sonarcloud:
+    organization: "ludovico99"
+    token:
+      secure: "85ab1c89eb8095c9fbe8ec0719fc13952bfe9876" # encrypted value of your token
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - sonar-scanner
 script: ant build
