@@ -4,9 +4,7 @@ jdk:
 addons:
   sonarcloud:
     organization: "ludovico99"
-    token:
-      secure: "b8c2723ef3fc8ec04fdf54343066a850a50af00b" # encrypted value of your token
-
+    token: b8c2723ef3fc8ec04fdf54343066a850a50af00b
 script:
   - ant build
   - sonar-scanner
